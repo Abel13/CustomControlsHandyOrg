@@ -1,0 +1,19 @@
+﻿<Window x:Class="CustomControlsHandyOrg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomControlsHandyOrg"
+        mc:Ignorable="d"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        Height="450" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Background="#FF222222">
+        <StackPanel VerticalAlignment="Center">
+            <hc:Gravatar Id="{Binding Value, ElementName=slider}"/>
+            <TextBlock FontSize="18" Text="DOWNLOADING..." Margin="5 15" Foreground="White" HorizontalAlignment="Center"/>
+            <hc:WaveProgressBar Value="{Binding Value, ElementName=slider}" Maximum="100" Background="#FF555555" WaveFill="#FF563380" WaveStroke="#FF502875" WaveThickness="1" Foreground="White"/>
+            <Button Content="STOP" Margin="15" HorizontalAlignment="Stretch" Background="#FF563380" BorderBrush="#FF4E2480" Foreground="White"/>
+            <hc:PreviewSlider x:Name="slider" Value="0" Maximum="100" Margin="20"/>
+        </StackPanel>
+    </Grid>
+</Window>
